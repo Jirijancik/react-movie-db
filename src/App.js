@@ -6,7 +6,7 @@ function App() {
 
     <React.Fragment>
 
-    <MainPage></MainPage>
+    <MainPage key= {"MainPage"}></MainPage>
 
     </React.Fragment>
 

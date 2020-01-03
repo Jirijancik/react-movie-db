@@ -1,0 +1,21 @@
+:root {
+  /*******************FONT COLLORS*************************/
+  --font-primary-collor: #ffffff;
+  --font-secondary-collor: #000;
+  /*******************BACKGROUND COLLORS*******************/
+  --background-primary-collor: #000;
+  --background-secondary-collor: #ffffff;
+  /*******************SCROLLBAR COLLORS********************/
+  --scrollbarBG: #000;
+  --thumbBG: #c202d4;
+
+  /*************************FONT***************************/
+  --font-main: stellar-light,sans-serif;
+}
+
+
+
+@font-face{
+  src: url(../../font/Stellar-light.otf);
+  font-family: stellar-light;
+}

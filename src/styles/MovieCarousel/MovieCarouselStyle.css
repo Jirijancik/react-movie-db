@@ -1,0 +1,10 @@
+@import url(a:\Programming\react-movie-db\src\styles\variables\Variables.css);
+.movie-carousel {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  overflow-x: scroll;
+}
+/*# sourceMappingURL=MovieCarouselStyle.css.map */

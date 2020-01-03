@@ -1,0 +1,12 @@
+@import "../variables/Variables.css";
+
+
+.movie-carousel{
+  //  background-color: var(--background-primary-collor);
+  //  color: var(--font-primary-collor);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    overflow-x: scroll;
+
+}

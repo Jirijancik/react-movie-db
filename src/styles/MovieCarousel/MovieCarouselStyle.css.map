@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAP,qEAAO;AAGP,AAAA,eAAe,CAAA;EAGX,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,mBAAmB;EAC1C,aAAa,EAAE,MAAM;EACrB,UAAU,EAAE,MAAM;CAErB",
+    "sources": [
+        "MovieCarouselStyle.scss"
+    ],
+    "names": [],
+    "file": "MovieCarouselStyle.css"
+}

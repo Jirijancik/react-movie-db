@@ -1,0 +1,30 @@
+@import "../variables/Variables.css";
+
+/*****************DEFAULT VALUES*************/
+body{
+    background-color: var(--background-primary-collor);
+    color: var(--font-primary-collor);
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+} 
+
+/****************SCROLLBAR*******************/
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+    &-track{
+        background: var(--scrollbarBG);
+    }
+    &-thumb{
+        background-color: var(--thumbBG);
+        border-radius: 0px;
+    }
+}
+
+// Firefox support for scrollbar styles
+*{
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
