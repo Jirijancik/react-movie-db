@@ -6,7 +6,7 @@ import '../../styles/MovieCarousel'
 
 import { useHttp } from '../../hooks/http'
 
-const MovieCarousel = ({fetchUrl}) => {
+const MovieCarousel = ({carouselTitle, fetchItems, fetchUrl}) => {
 
     
    
@@ -20,13 +20,16 @@ const MovieCarousel = ({fetchUrl}) => {
 
     if (fetchedData) {
         const data = fetchedData.results;
-        data.length= 5;
+        data.length= fetchItems;
         loadedMovies = data.map(movie => {
             return(
                 <MovieTitle
-                    MovieTitle={movie.title}
+                    MovieTitle={movie.original_title ? movie.original_title :movie.original_name}
                     MovieImage={movie.poster_path}
                     MoviePopularity={movie.popularity}
+                    MovieLanguage = {movie.original_language}
+                    MovieOverview = {movie.overview}
+
                     key={movie.id}
                 ></MovieTitle>
             )
@@ -39,9 +42,10 @@ const MovieCarousel = ({fetchUrl}) => {
 
 
     if (!isloading && loadedMovies) {
-        content = (
+        content = [
+            <h2>{carouselTitle}</h2>,
             <div className="movie-carousel"> {loadedMovies}</div>
-        )
+        ]
         console.log(fetchedData.results)
     } else if (!isloading && !loadedMovies) {
         content = <p className="movie-carousel">Failed to fetch character.</p>;

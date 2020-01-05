@@ -1,18 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-import '../../styles/MovieTitle'
+import '../../styles/MovieTile'
+import MovieInfoWindow from '../MovieInfoWindow/MovieInfoWindow';
 
 
-const MovieTile = ({MovieTitle, MoviePopularity, MovieImage}) => {
+const MovieTile = ({ MovieTitle, MoviePopularity, MovieImage, MovieLanguage, MovieOverview }) => {
+
+    const [isLargeTile, setLargeTile] = useState(false);
 
 
     const MovieImageURL = `https://image.tmdb.org/t/p/w600_and_h900_bestv2${MovieImage}`
 
+
+
+    let innerContent = (
+        <React.Fragment>
+            <img className="movie-carousel__tile__poster" src={MovieImageURL} alt="Movie Poster"></img>
+            <h2 className="movie-carousel__tile__name"> {MovieTitle}</h2>
+            <p className="movie-carousel__tile__popularity" > {MoviePopularity} </p>
+        </React.Fragment>
+    )
+
+
+
+
     let content = (
-        <div className="movie-carousel__title">
-            <img className="movie-carousel__title__poster" src={MovieImageURL} alt="Movie Poster"></img>
-            <h2> {MovieTitle}</h2>
-            <p> {MoviePopularity} </p>
+        <div className={isLargeTile ? "movie-carousel__info-window" : "movie-carousel__tile"} onClick={() => setLargeTile(!isLargeTile)}>
+            {!isLargeTile ?
+                innerContent :
+                <MovieInfoWindow
+                    MovieTitle={MovieTitle}
+                    MoviePopularity={MoviePopularity}
+                    MovieImageURL={MovieImageURL}
+                    MovieLanguage={MovieLanguage}
+                    MovieOverview={MovieOverview}
+                ></MovieInfoWindow>}
         </div>
     );
 

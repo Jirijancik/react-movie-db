@@ -1,0 +1,47 @@
+@import "../variables/Variables.css";
+
+.movie-carousel__info-window{
+    z-index: 9999;
+    display: grid;
+    width: 1000px;
+    height: 600px;
+    padding: 10px 35px;
+    margin: 0px 50px 50px 50px;
+    background-color: rgb(0, 0, 0);
+    transition: width .2s ease-in, height .45s  ease-in, background-color .15s ease-in;
+    grid-template-columns: 4fr 7fr;
+
+    grid-template-areas: 
+    "header      trailer"
+    "header      trailer"
+    "popularity  trailer"
+    "language    trailer"
+    "   .        trailer"
+    "overview    trailer"
+    ;
+
+    &__span--purple{
+        color: var(--thumbBG);
+        font-weight: bold;
+    }
+    &__header{
+        grid-area: header;
+    }
+    &__popularity{
+        grid-area: popularity;
+    }
+    &__language{
+        grid-area: language;
+    }
+    &__overview{
+        grid-area: overview;
+    }
+    &__trailer{
+        grid-area: trailer;
+        height: 90%;
+        justify-self: center;
+        align-self: center;
+        opacity: .65;
+    }
+}
+

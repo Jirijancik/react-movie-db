@@ -1,0 +1,61 @@
+@import url(a:\Programming\react-movie-db\src\styles\variables\Variables.css);
+.movie-carousel__info-window {
+  z-index: 9999;
+  display: -ms-grid;
+  display: grid;
+  width: 1000px;
+  height: 600px;
+  padding: 10px 35px;
+  margin: 0px 50px 50px 50px;
+  background-color: black;
+  -webkit-transition: width .2s ease-in, height .45s  ease-in, background-color .15s ease-in;
+  transition: width .2s ease-in, height .45s  ease-in, background-color .15s ease-in;
+  -ms-grid-columns: 4fr 7fr;
+      grid-template-columns: 4fr 7fr;
+      grid-template-areas: "header      trailer" "header      trailer" "popularity  trailer" "language    trailer" "   .        trailer" "overview    trailer";
+}
+
+.movie-carousel__info-window__span--purple {
+  color: var(--thumbBG);
+  font-weight: bold;
+}
+
+.movie-carousel__info-window__header {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: header;
+}
+
+.movie-carousel__info-window__popularity {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: popularity;
+}
+
+.movie-carousel__info-window__language {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: language;
+}
+
+.movie-carousel__info-window__overview {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: overview;
+}
+
+.movie-carousel__info-window__trailer {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 6;
+  -ms-grid-column: 2;
+  grid-area: trailer;
+  height: 90%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  opacity: .65;
+}
+/*# sourceMappingURL=MovieInfoWindowStyles.css.map */

@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,OAAO,CAAP,qEAAO;AAGP,AAAA,sBAAsB,CAAA;EAClB,OAAO,EAAE,YAAY;EACrB,OAAO,EAAE,SAAS;CAIrB;;AAHI,AAAD,8BAAS,CAAA;EACL,MAAM,EAAE,KAAK;CAChB",
-    "sources": [
-        "MovieTitleStyle.scss"
-    ],
-    "names": [],
-    "file": "MovieTitleStyle.css"
-}

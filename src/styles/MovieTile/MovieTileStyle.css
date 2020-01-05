@@ -1,0 +1,62 @@
+@import url(a:\Programming\react-movie-db\src\styles\variables\Variables.css);
+.movie-carousel__tile {
+  display: inline-block;
+  padding: 10px 20px;
+  position: relative;
+  height: 400px;
+  width: 250px;
+  background-color: transparent;
+  -webkit-transition: width .7s ease, height .5s  ease-out, background-color .3s ease-out;
+  transition: width .7s ease, height .5s  ease-out, background-color .3s ease-out;
+}
+
+.movie-carousel__tile:hover .movie-carousel__tile__poster {
+  opacity: 0.08;
+  -webkit-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+  cursor: pointer;
+}
+
+.movie-carousel__tile:hover .movie-carousel__tile__name {
+  opacity: 1;
+  -webkit-transition: opacity .35s ease-in-out;
+  transition: opacity .35s ease-in-out;
+  cursor: pointer;
+}
+
+.movie-carousel__tile__poster {
+  height: 400px;
+  -webkit-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+  opacity: 1;
+}
+
+.movie-carousel__tile__popularity {
+  display: -ms-grid;
+  display: grid;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  position: absolute;
+  background-color: var(--thumbBG);
+  -webkit-box-shadow: 1px 1px 2px 1px var(--thumbBG), 2px 2px 1px 2px var(--scrollbarBG);
+          box-shadow: 1px 1px 2px 1px var(--thumbBG), 2px 2px 1px 2px var(--scrollbarBG);
+  z-index: 999;
+}
+
+.movie-carousel__tile__name {
+  z-index: 50;
+  position: absolute;
+  top: 30%;
+  font-size: 50px;
+  text-align: center;
+  opacity: 0;
+}
+/*# sourceMappingURL=MovieTileStyle.css.map */
