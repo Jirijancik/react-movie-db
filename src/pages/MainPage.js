@@ -1,7 +1,7 @@
 import React from 'react'
 
 import MovieCarousel from "../components/MovieCarousel"
-
+import MoviePlayer from '../components/MoviePlayer'
 
 
 const MainPage = ( props ) => {

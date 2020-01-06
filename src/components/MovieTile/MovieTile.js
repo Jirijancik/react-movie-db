@@ -25,7 +25,7 @@ const MovieTile = ({ MovieTitle, MoviePopularity, MovieImage, MovieLanguage, Mov
 
 
     let content = (
-        <div className={isLargeTile ? "movie-carousel__info-window" : "movie-carousel__tile"} onClick={() => setLargeTile(!isLargeTile)}>
+        <div className={isLargeTile ? "movie-carousel__info-window" : "movie-carousel__tile"} onClick={() => setLargeTile(true)}>
             {!isLargeTile ?
                 innerContent :
                 <MovieInfoWindow

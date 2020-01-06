@@ -9,7 +9,7 @@
     width: 250px;
     background-color:  transparent;
     transition: width .7s ease, height .5s  ease-out, background-color .3s ease-out ;
-
+    user-select: none;
     &:hover .movie-carousel__tile__poster{
         opacity: 0.08;
         transition: opacity .2s ease-in-out;

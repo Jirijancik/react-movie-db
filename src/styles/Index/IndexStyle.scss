@@ -28,3 +28,10 @@ body{
     scrollbar-width: thin;
     scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
+
+
+
+::selection {
+    background-color: var(--thumbBG);
+    color: var(--font-primary-collor);
+}

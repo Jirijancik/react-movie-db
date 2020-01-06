@@ -28,4 +28,14 @@ body {
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
+
+::-moz-selection {
+  background-color: var(--thumbBG);
+  color: var(--font-primary-collor);
+}
+
+::selection {
+  background-color: var(--thumbBG);
+  color: var(--font-primary-collor);
+}
 /*# sourceMappingURL=IndexStyle.css.map */

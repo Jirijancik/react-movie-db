@@ -8,6 +8,10 @@
   background-color: transparent;
   -webkit-transition: width .7s ease, height .5s  ease-out, background-color .3s ease-out;
   transition: width .7s ease, height .5s  ease-out, background-color .3s ease-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .movie-carousel__tile:hover .movie-carousel__tile__poster {
