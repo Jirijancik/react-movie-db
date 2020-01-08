@@ -6,10 +6,10 @@ import '../../styles/MovieCarousel'
 
 import { useHttp } from '../../hooks/http'
 
-const MovieCarousel = ({carouselTitle, fetchItems, fetchUrl}) => {
+const MovieCarousel = ({ carouselTitle, fetchItems, fetchUrl, handleOnWheel }) => {
 
-    
-   
+
+
 
     const [isloading, fetchedData] = useHttp(
         fetchUrl, []
@@ -20,15 +20,15 @@ const MovieCarousel = ({carouselTitle, fetchItems, fetchUrl}) => {
 
     if (fetchedData) {
         const data = fetchedData.results;
-        data.length= fetchItems;
+        data.length = fetchItems;
         loadedMovies = data.map(movie => {
-            return(
+            return (
                 <MovieTitle
-                    MovieTitle={movie.original_title ? movie.original_title :movie.original_name}
+                    MovieTitle={movie.original_title ? movie.original_title : movie.original_name}
                     MovieImage={movie.poster_path}
                     MoviePopularity={movie.popularity}
-                    MovieLanguage = {movie.original_language}
-                    MovieOverview = {movie.overview}
+                    MovieLanguage={movie.original_language}
+                    MovieOverview={movie.overview}
 
                     key={movie.id}
                 ></MovieTitle>
@@ -44,7 +44,22 @@ const MovieCarousel = ({carouselTitle, fetchItems, fetchUrl}) => {
     if (!isloading && loadedMovies) {
         content = [
             <h2>{carouselTitle}</h2>,
-            <div className="movie-carousel"> {loadedMovies}</div>
+
+            <div
+                className="movie-carousel"
+                onWheel={handleOnWheel}
+            >
+                <button
+                    className="movie-carousel__button movie-carousel__button--left"
+                    onClick = {e => e.target.parentElement.scrollLeft -=450}
+                >{"<"}</button>
+                {loadedMovies}
+                <button
+                    className="movie-carousel__button movie-carousel__button--right"
+                    onClick = {e => e.target.parentElement.scrollLeft +=450}
+                >{">"}</button>
+            </div>,
+
         ]
         console.log(fetchedData.results)
     } else if (!isloading && !loadedMovies) {

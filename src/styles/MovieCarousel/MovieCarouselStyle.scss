@@ -5,7 +5,7 @@
   //  background-color: var(--background-primary-collor);
   //  color: var(--font-primary-collor);
   display: grid;
-
+  position: relative;
   grid-auto-flow: column;
   grid-column-gap: 5%;
   grid-row: 1;
@@ -13,4 +13,26 @@
   justify-items: center;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
+
+  &__button{
+    z-index: 9999999999999;
+    width: 70px;
+    height: 100%;
+    position: sticky;
+    background-color: transparent;
+    border: none;
+    color: var(--thumbBG);
+    font-size: 80px;
+    opacity: 0.7;
+    outline-color: var(--thumbBG);
+    &--right{
+      right: 0;
+    }
+    &--left{
+      left: 0;
+    }
+    &:hover{
+      opacity: 1;
+    }
+  }
 }

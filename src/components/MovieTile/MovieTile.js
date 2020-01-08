@@ -34,17 +34,6 @@ const MovieTile = ({ MovieTitle, MoviePopularity, MovieImage, MovieLanguage, Mov
         setLargeTile(true)
     }
 
-
-
-
-
-
-
-
-
-
-
-
     let innerContent = (
         <React.Fragment>
             <img className="movie-carousel__tile__poster" src={MovieImageURL} alt="Movie Poster"></img>

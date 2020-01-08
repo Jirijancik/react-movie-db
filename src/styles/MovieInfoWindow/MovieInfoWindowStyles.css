@@ -3,13 +3,13 @@
   z-index: 9999;
   display: -ms-grid;
   display: grid;
-  width: 70vw;
-  height: 65vh;
+  width: 50vw;
+  height: 30vh;
   padding: 10px 35px;
-  margin: 0px 50px 50px 50px;
-  background-color: black;
-  -webkit-transition: width .2s ease-in, height .45s ease-in, background-color .15s ease-in;
-  transition: width .2s ease-in, height .45s ease-in, background-color .15s ease-in;
+  margin: 0;
+  background-color: transparent;
+  -webkit-transition: width .3s ease-in, height .55s ease-in;
+  transition: width .3s ease-in, height .55s ease-in;
   -ms-grid-columns: 4fr 7fr;
       grid-template-columns: 4fr 7fr;
       grid-template-areas: "header      trailer" "header      trailer" "popularity  trailer" "language    trailer" "   .        trailer" "overview    trailer";

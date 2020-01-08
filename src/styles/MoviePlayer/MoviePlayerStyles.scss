@@ -51,15 +51,16 @@
     }
 
     &__video-progress{
+        display: none;
         height: 10px;
         top:0;
         left: 0;
         width: 100%;
-        background-color: rgb(17, 56, 61);
+        background-color: transparent;
         &__meter{
             height: 6px;
             border-radius: 0px 50px 50px 0px;
-            background-color:var(--thumbBG);
+            background-color:transparent;
         }
     }
 
