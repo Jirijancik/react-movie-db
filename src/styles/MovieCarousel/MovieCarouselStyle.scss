@@ -1,12 +1,16 @@
 @import "../variables/Variables.css";
 
 
-.movie-carousel{
+.movie-carousel {
   //  background-color: var(--background-primary-collor);
   //  color: var(--font-primary-collor);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    justify-items: center;
-    overflow-x: scroll;
+  display: grid;
 
+  grid-auto-flow: column;
+  grid-column-gap: 5%;
+  grid-row: 1;
+  overflow: hidden;
+  justify-items: center;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
 }

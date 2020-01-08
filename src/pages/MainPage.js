@@ -1,7 +1,6 @@
 import React from 'react'
 
 import MovieCarousel from "../components/MovieCarousel"
-import MoviePlayer from '../components/MoviePlayer'
 
 
 const MainPage = ( props ) => {
@@ -10,10 +9,13 @@ const MainPage = ( props ) => {
     const PupularTvShowsUrl = "https://api.themoviedb.org/3/tv/popular?api_key=98ce4db000fae9862ed2b07152868c56&language=en-US&page=1";
 
 
+
     return[
         <h1>MoveDB</h1>,
-        <MovieCarousel carouselTitle="Popular Movies" fetchItems={5} fetchUrl={PopularMoviesUrl} key="PopularMoviesCarousel"></MovieCarousel>,
-        <MovieCarousel carouselTitle="Popular TV Shows" fetchItems={5} fetchUrl={PupularTvShowsUrl} key="PopularTvShowsCarousel"></MovieCarousel>
+        <MovieCarousel  carouselTitle="Popular Movies" fetchItems={8} fetchUrl={PopularMoviesUrl} key="PopularMoviesCarousel"></MovieCarousel>,
+        <MovieCarousel  carouselTitle="Popular TV Shows" fetchItems={15} fetchUrl={PupularTvShowsUrl} key="PopularTvShowsCarousel"></MovieCarousel>,
+        <MovieCarousel  carouselTitle="Popular TV Shows" fetchItems={15} fetchUrl={PupularTvShowsUrl} key="PopularTvShowsCarousel"></MovieCarousel>,
+        <MovieCarousel  carouselTitle="Popular TV Shows" fetchItems={15} fetchUrl={PupularTvShowsUrl} key="PopularTvShowsCarousel"></MovieCarousel>
     ];
 }
 

@@ -29,7 +29,9 @@ body{
     scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
 
-
+html {
+    scroll-behavior: smooth;
+  }
 
 ::selection {
     background-color: var(--thumbBG);

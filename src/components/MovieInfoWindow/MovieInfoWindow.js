@@ -5,7 +5,10 @@ import MoviePlayer from '../MoviePlayer'
 import '../../styles/MovieInfoWindow'
 
 
-const MovieInfoWindow = ({ MovieTitle, MovieImageURL, MoviePopularity, MovieLanguage, MovieOverview }) => {
+const MovieInfoWindow = ({ MovieTitle, MovieImageURL, MoviePopularity, MovieLanguage, MovieOverview}) => {
+
+
+
 
     let content = [
         <h1 className="movie-carousel__info-window__header">{MovieTitle}</h1>,

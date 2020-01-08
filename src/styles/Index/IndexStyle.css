@@ -29,6 +29,10 @@ body {
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::-moz-selection {
   background-color: var(--thumbBG);
   color: var(--font-primary-collor);
