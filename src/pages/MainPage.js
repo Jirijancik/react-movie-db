@@ -12,8 +12,6 @@ const MainPage = ( props ) => {
         <h1>MoveDB</h1>,
         <MovieCarousel  carouselTitle="Popular Movies" fetchItems={8} fetchUrl={PopularMoviesUrl} key="PopularMoviesCarousel"></MovieCarousel>,
         <MovieCarousel  carouselTitle="Popular TV Shows" fetchItems={15} fetchUrl={PupularTvShowsUrl} key="PopularTvShowsCarousel"></MovieCarousel>,
-        <MovieCarousel  carouselTitle="Popular TV Shows" fetchItems={15} fetchUrl={PupularTvShowsUrl} key="PopularTvShowsCarousel"></MovieCarousel>,
-        <MovieCarousel  carouselTitle="Popular TV Shows" fetchItems={15} fetchUrl={PupularTvShowsUrl} key="PopularTvShowsCarousel"></MovieCarousel>
     ];
 }
 

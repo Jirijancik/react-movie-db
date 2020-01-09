@@ -30,7 +30,8 @@ const MovieCarousel = ({ carouselTitle, fetchItems, fetchUrl, handleOnWheel }) =
                     MovieLanguage={movie.original_language}
                     MovieOverview={movie.overview}
 
-                    key={movie.id}
+                    id={movie.id + carouselTitle}
+                    key={movie.id + carouselTitle}
                 ></MovieTitle>
             )
         })
@@ -65,6 +66,7 @@ const MovieCarousel = ({ carouselTitle, fetchItems, fetchUrl, handleOnWheel }) =
     } else if (!isloading && !loadedMovies) {
         content = <p className="movie-carousel">Failed to fetch character.</p>;
     }
+
     return content;
 
 }

@@ -1,29 +1,29 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useContext } from 'react'
 
 import '../../styles/MovieTile'
 import MovieInfoWindow from '../MovieInfoWindow/MovieInfoWindow';
+import { MovieTitleContext } from '../../context/MovieTileContext';
 
 
-const MovieTile = ({ MovieTitle, MoviePopularity, MovieImage, MovieLanguage, MovieOverview }) => {
+const MovieTile = ({ MovieTitle, MoviePopularity, MovieImage, MovieLanguage, MovieOverview, id }) => {
 
-    const [isLargeTile, setLargeTile] = useState(false);
-
+    const [isLargeTile, setIsLargeTile] = useState(false);
+    const [tileStateId, setTileStateId] = useContext(MovieTitleContext);
 
     const MovieImageURL = `https://image.tmdb.org/t/p/w600_and_h900_bestv2${MovieImage}`
 
     const videoElementRef = useRef(null);
 
+
     useEffect(() => {
         if (videoElementRef && isLargeTile) {
             let x = videoElementRef.current.getBoundingClientRect().left;
-            console.log(x);
-            console.log(videoElementRef.current.offsetLeft)
             if (x > 400) {
                 if (videoElementRef && isLargeTile) {
                     videoElementRef.current.scrollIntoView({
                         behavior: 'smooth',
-                        block: 'start',
-                        inline: 'start'
+                        block: 'center',
+                        inline: 'center'
                     });
                 }
             }
@@ -31,7 +31,17 @@ const MovieTile = ({ MovieTitle, MoviePopularity, MovieImage, MovieLanguage, Mov
     }, [isLargeTile])
 
     const handleOnClick = () => {
-        setLargeTile(true)
+      
+        if(tileStateId !== id){
+            
+            setIsLargeTile(true);
+            setTileStateId(id);
+        }else if(tileStateId=== id){
+            return
+        }else{
+            setTileStateId(null);
+            setIsLargeTile(false);
+        }
     }
 
     let innerContent = (
@@ -44,11 +54,13 @@ const MovieTile = ({ MovieTitle, MoviePopularity, MovieImage, MovieLanguage, Mov
 
     let content = (
         <div
-            className={isLargeTile ? "movie-carousel__info-window" : "movie-carousel__tile"}
+            className={(isLargeTile && tileStateId === id) ? "movie-carousel__info-window" : "movie-carousel__tile"}
             onClick={handleOnClick}
             ref={videoElementRef}
+
+            key={MoviePopularity + id}
         >
-            {!isLargeTile ?
+            {!(isLargeTile && tileStateId === id)  ?
                 innerContent :
                 <MovieInfoWindow
                     MovieTitle={MovieTitle}
@@ -56,15 +68,14 @@ const MovieTile = ({ MovieTitle, MoviePopularity, MovieImage, MovieLanguage, Mov
                     MovieImageURL={MovieImageURL}
                     MovieLanguage={MovieLanguage}
                     MovieOverview={MovieOverview}
+
+                    id={id}
+                    key={"MIW" + id}
                 ></MovieInfoWindow>}
         </div>
     );
 
-
-
-
     return content;
-
 }
 
 export default MovieTile;

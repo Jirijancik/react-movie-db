@@ -10,6 +10,8 @@
     background-color:  transparent;
     transition: width .7s ease, height .5s  ease-out, background-color .3s ease-out ;
     user-select: none;
+    -webkit-user-drag: none;
+
     &:hover .movie-carousel__tile__poster{
         opacity: 0.08;
         transition: opacity .2s ease-in-out;
@@ -25,6 +27,8 @@
         height: 400px;
         transition: opacity .2s ease-in-out;
         opacity: 1;
+        user-select: none;
+        -webkit-user-drag: none;
     }
     &__popularity{
         display: grid;

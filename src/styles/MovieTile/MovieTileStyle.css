@@ -12,6 +12,7 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-user-drag: none;
 }
 
 .movie-carousel__tile:hover .movie-carousel__tile__poster {
@@ -33,6 +34,11 @@
   -webkit-transition: opacity .2s ease-in-out;
   transition: opacity .2s ease-in-out;
   opacity: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
 }
 
 .movie-carousel__tile__popularity {
