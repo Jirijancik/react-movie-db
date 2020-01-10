@@ -12,6 +12,7 @@
   transition: width .3s ease-in, height .55s ease-in;
   -ms-grid-columns: 4fr 7fr;
       grid-template-columns: 4fr 7fr;
+  grid-column-gap: 20px;
       grid-template-areas: "header      trailer" "header      trailer" "popularity  trailer" "language    trailer" "   .        trailer" "overview    trailer";
 }
 

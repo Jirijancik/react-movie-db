@@ -4,13 +4,15 @@ import '../../styles/MovieTile'
 import MovieInfoWindow from '../MovieInfoWindow/MovieInfoWindow';
 import { MovieTitleContext } from '../../context/MovieTileContext';
 
+import MovieImageNotFound from '../../images/ImageNotFound.jpg'
 
 const MovieTile = ({ MovieTitle, MoviePopularity, MovieImage, MovieLanguage, MovieOverview, id }) => {
 
     const [isLargeTile, setIsLargeTile] = useState(false);
     const [tileStateId, setTileStateId] = useContext(MovieTitleContext);
 
-    const MovieImageURL = `https://image.tmdb.org/t/p/w600_and_h900_bestv2${MovieImage}`
+    const MovieImageURL = `https://image.tmdb.org/t/p/w600_and_h900_bestv2${MovieImage}`;
+   
 
     const videoElementRef = useRef(null);
 
@@ -46,7 +48,14 @@ const MovieTile = ({ MovieTitle, MoviePopularity, MovieImage, MovieLanguage, Mov
 
     let innerContent = (
         <React.Fragment>
-            <img className="movie-carousel__tile__poster" src={MovieImageURL} alt="Movie Poster"></img>
+            <img className="movie-carousel__tile__poster" 
+
+            src={ MovieImage? MovieImageURL : MovieImageNotFound
+            
+            } 
+            alt="Movie Poster"
+
+            ></img>
             <h2 className="movie-carousel__tile__name"> {MovieTitle}</h2>
             <p className="movie-carousel__tile__popularity" > {MoviePopularity} </p>
         </React.Fragment>

@@ -10,6 +10,7 @@
     background-color:transparent;
     transition: width .3s ease-in, height .55s ease-in;
     grid-template-columns: 4fr 7fr;
+    grid-column-gap: 20px;
 
     grid-template-areas:
         "header      trailer"

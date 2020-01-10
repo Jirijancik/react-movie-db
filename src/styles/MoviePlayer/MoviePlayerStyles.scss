@@ -31,15 +31,15 @@
         
         &--medium{
             // height: 160px;
-            // width: 160px;
+            // width: 160px;/
         }
     }
 
     &__container{
-        display: flex;
+        display: gird;
         justify-content: center;
         align-items: center;
-        height: 400px;
+        max-width: 100%;
     
     }
 
@@ -73,4 +73,9 @@
 }
 .hidden:focus{
     outline: none;
+}
+
+.c-video{
+    height: auto;
+    max-width: 100%;
 }

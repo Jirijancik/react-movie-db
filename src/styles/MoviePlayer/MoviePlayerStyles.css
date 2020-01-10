@@ -31,16 +31,14 @@
 }
 
 .movie-player__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: gird;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 400px;
+  max-width: 100%;
 }
 
 .movie-player__controls {
@@ -73,5 +71,10 @@
 
 .hidden:focus {
   outline: none;
+}
+
+.c-video {
+  height: auto;
+  max-width: 100%;
 }
 /*# sourceMappingURL=MoviePlayerStyles.css.map */
