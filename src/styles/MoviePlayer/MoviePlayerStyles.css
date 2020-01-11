@@ -1,4 +1,32 @@
 @import url(a:\Programming\react-movie-db\src\styles\variables\Variables.css);
+.shaka-video {
+  margin-top: 2rem;
+  max-width: 100%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: relative;
+}
+
+.shaka-controls-button-panel > * {
+  color: var(--thumbBG) !important;
+}
+
+.shaka-play-button {
+  border-radius: 20px !important;
+  background-color: var(--thumbBG) !important;
+}
+
+.shaka-controls-container {
+  top: 1px !important;
+}
+
+.material-icons {
+  font-size: 35px !important;
+}
+
 .movie-player {
   grid-area: trailer;
   -ms-grid-column-align: center;

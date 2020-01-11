@@ -3,6 +3,7 @@ import React from 'react'
 import MoviePlayer from '../MoviePlayer'
 
 import '../../styles/MovieInfoWindow'
+import ShakaMoviePlayer from '../ShakaMoviePlayer/ShakaMoviePlayer'
 
 
 const MovieInfoWindow = ({ MovieTitle, MovieImageURL, MoviePopularity, MovieLanguage, MovieOverview, id}) => {
@@ -16,13 +17,14 @@ const MovieInfoWindow = ({ MovieTitle, MovieImageURL, MoviePopularity, MovieLang
         <p className="movie-carousel__info-window__language">Language: {MovieLanguage}</p>,
         <p className="movie-carousel__info-window__overview">Overview: {MovieOverview}</p>,
 
-       <MoviePlayer 
-       MovieImageURL={MovieImageURL}
+    //    <MoviePlayer 
+    //    MovieImageURL={MovieImageURL}
        
-       key={id+"player"+MovieImageURL}
-       ></MoviePlayer>
+    //    key={id+"player"+MovieImageURL}
+    //    ></MoviePlayer>
 
-
+        <ShakaMoviePlayer></ShakaMoviePlayer>
+            
     ]
 
     return content;

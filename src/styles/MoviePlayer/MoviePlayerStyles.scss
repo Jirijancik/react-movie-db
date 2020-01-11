@@ -2,11 +2,34 @@
 
 
 
+.shaka-video{
+    margin-top: 2rem;
+    max-width: 100%;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+}
+
+.shaka-controls-button-panel>* {
+    color: var(--thumbBG) !important;
+}
+
+.shaka-play-button {
+    border-radius: 20px !important;
+    background-color: var(--thumbBG) !important;
+}
+
+.shaka-controls-container {
+    top: 1px !important;
+}
+.material-icons{
+    font-size: 35px !important;
+}
 
 .movie-player{
+
     //Grid area used in "movie-carousel__info-window"
     grid-area: trailer;
-
     justify-self: center;
     align-self: center;
     position: relative;
