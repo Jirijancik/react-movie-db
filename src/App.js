@@ -1,8 +1,12 @@
 import React from 'react';
 // Import Component
 import MainPage from './pages/MainPage';
+import SearchPage from './pages/SearchPage';
 // Import Context 
 import { MovieTileProvider } from './context/MovieTileContext';
+//Import Router
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
 
 /**
  * App showing data from themoviedb.org via API
@@ -11,13 +15,17 @@ import { MovieTileProvider } from './context/MovieTileContext';
  * set up Movie Tile Context providin ID of current active Movie Tile.
  */
 function App() {
-  return (
-    // TODO: Create React Router for separate Search Page
+  return (   
+    <Router>
+      <Switch>
+        <MovieTileProvider key={"MovieTileProvider"}>
+        
+          <Route path="/" exact component={MainPage} />
+          <Route path="/search" component={SearchPage} />
 
-    //Main Page with Context
-    <MovieTileProvider key={"MovieTileProvider"}>
-      <MainPage key={"MainPage"}></MainPage>
-    </MovieTileProvider>
+        </MovieTileProvider>
+      </Switch>
+    </Router>
   );
 }
 

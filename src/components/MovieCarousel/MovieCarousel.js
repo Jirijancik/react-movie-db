@@ -22,16 +22,16 @@ const MovieCarousel = ({ carouselTitle, fetchItems, fetchUrl, handleOnWheel , id
 
     // Initial value for loaded movies
     let loadedMovies = null;
-
     // Logic for populating loadedMovies var. by Movie Tiles with fetched data
     if (fetchedData) {
 
         //fetchedData has movie results stored in fetchedData.results 
         const data = fetchedData.results;
         
-        //Cutting results arr with length given in comp. props
-        data.length = fetchItems;
-
+        //Cutting results arr with length given in comp. props else list all movies
+        if(fetchItems){
+            data.length= fetchItems;
+        }
         //Mapping over fetchedData and storing MovieTitles into loadedMovies
         loadedMovies = data.map(movie => {
             return (
@@ -56,8 +56,12 @@ const MovieCarousel = ({ carouselTitle, fetchItems, fetchUrl, handleOnWheel , id
     //Content
     let content = <p className="movie-carousel" key={id + " Loading"}>Loading Movies...</p>;
 
+    //If statement for possibilities of invalid or empty search values
+    if(!isloading && (!fetchedData || fetchedData.total_results === 0)){
+        content = <h1 className="movie-carousel__error-title">No Movies Found</h1>
+    }
     //If data are loaded and loadedMovies are not emplty, then list of MovieTiles will be displayed
-    if (!isloading && loadedMovies) {
+    else if (!isloading && loadedMovies) {
         content = [
             <h2 className = "movie-carousel__title" key={id + " Title"}>{carouselTitle}</h2>,
 
@@ -88,6 +92,7 @@ const MovieCarousel = ({ carouselTitle, fetchItems, fetchUrl, handleOnWheel , id
         //If data are no longer loading yet loadedMovies are empty err will be shown
         content = <p className="movie-carousel" key={id+" Failed to fetch character"}>Failed to fetch character.</p>;
     }
+
 
     //Returning Content
     return content;

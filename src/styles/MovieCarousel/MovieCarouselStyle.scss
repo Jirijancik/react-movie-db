@@ -24,6 +24,11 @@
     margin-left: 50px;
     font-size: var(--font-medium-size);
   }
+  &__error-title{
+    font-size: var(--font-largest-size);
+    width:100%;
+    text-align: center;
+  }
 
   &__button {
     z-index: 9999999999999;

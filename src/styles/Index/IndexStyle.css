@@ -40,4 +40,41 @@ html {
 ::selection {
   background-color: var(--secondary-collor);
 }
+
+/****************CUSTOM LINKS*******************/
+.link-wrapper {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  background: transparent;
+}
+
+.link-wrapper:hover .custom-underline::after {
+  top: 117%;
+  height: 4px;
+  -webkit-transition: 0.4s ease all;
+  transition: 0.4s ease all;
+}
+
+.custom-underline {
+  position: relative;
+  display: inline-block;
+  font-size: var(--font-largest-size);
+  font-weight: 200;
+  text-align: center;
+  color: var(--primary-collor);
+  text-decoration: none;
+}
+
+.custom-underline::after {
+  content: "";
+  position: absolute;
+  top: 110%;
+  height: 3px;
+  width: 90%;
+  left: 2%;
+  background-color: var(--secondary-collor);
+  -webkit-transition: 0.3s ease all .1s;
+  transition: 0.3s ease all .1s;
+}
 /*# sourceMappingURL=IndexStyle.css.map */

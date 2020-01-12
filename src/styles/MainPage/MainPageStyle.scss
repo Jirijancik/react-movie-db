@@ -2,3 +2,15 @@
     margin: 50px;
     font-size: var(--font-largest-size);
 }
+
+.main-page-header{
+    display: grid;
+    grid-template-columns: 10fr 2fr;
+    
+}
+.search-icon{
+    justify-content: center;
+    align-self: center;
+    margin:70px;
+    
+}
