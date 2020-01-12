@@ -13,7 +13,7 @@ import '../../styles/MovieInfoWindow'
 const MovieInfoWindow = ({ MovieTitle, MoviePopularity, MovieLanguage, MovieOverview, id}) => {
 
     let content = [
-        <h1 className="movie-carousel__info-window__header">{MovieTitle}</h1>,
+        <h1 className="movie-carousel__info-window__header" data-testid="MovieInfoWindowHeaderTest">{MovieTitle}</h1>,
         <div className="movie-carousel__info-window__popularity">Popularity: <span className="movie-carousel__info-window__span--purple">{MoviePopularity}</span></div>,
         <p className="movie-carousel__info-window__language">Language: {MovieLanguage}</p>,
         <p className="movie-carousel__info-window__overview">Overview: {MovieOverview}</p>,

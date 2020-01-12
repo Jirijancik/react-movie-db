@@ -69,10 +69,10 @@ const MovieTile = ({ MovieTitle, MoviePopularity, MovieImage, MovieLanguage, Mov
                 src={MovieImage ? MovieImageURL : MovieImageNotFound}
                 alt="Movie Poster"
                 tabIndex={0}
-
+                data-testid="MovieTilePosterTest"
             ></img>
-            <h2 className="movie-carousel__tile__name"> {MovieTitle}</h2>
-            <p className="movie-carousel__tile__popularity" > {MoviePopularity} </p>
+            <h2 className="movie-carousel__tile__name" data-testid="MovieTileNameTest" > {MovieTitle}</h2>
+            <p className="movie-carousel__tile__popularity" data-testid="MovieTilePopularityTest"> {MoviePopularity} </p>
         </React.Fragment>
     )
 

@@ -65,7 +65,6 @@ const MovieCarousel = ({ carouselTitle, fetchItems, fetchUrl, handleOnWheel }) =
                 className="movie-carousel"
                 onWheel={handleOnWheel}
                 tabIndex={0}
-
             >
                 <button
                     className="movie-carousel__button movie-carousel__button--left"
