@@ -16,13 +16,14 @@ const MainPage = () => {
     const PupularTvShowsUrl = "https://api.themoviedb.org/3/tv/popular?api_key=98ce4db000fae9862ed2b07152868c56&language=en-US&page=1";
 
     return [
-        <h1 className="main-page__title">Movie_DB</h1>,
+        <h1 key="MainPageTitle" className="main-page__title">Movie_DB</h1>,
 
         <MovieCarousel
             carouselTitle="Popular Movies"
             fetchItems={8}
             fetchUrl={PopularMoviesUrl}
             key="PopularMoviesCarousel"
+            id = "PopularMoviesCarousel"
         ></MovieCarousel>,
 
         <MovieCarousel
@@ -30,6 +31,7 @@ const MainPage = () => {
             fetchItems={15}
             fetchUrl={PupularTvShowsUrl}
             key="PopularTvShowsCarousel"
+            id ="PopularMoviesCarousel"
         ></MovieCarousel>,
     ];
 }

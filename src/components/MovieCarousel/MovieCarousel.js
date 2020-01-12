@@ -13,7 +13,7 @@ import { useHttp } from '../../hooks/http'
 * A Carousel component is filled with "Movie Tiles". Horizontal scroll is done by direction buttons. 
 * Amount of Movies displayed is determined by 'fetchItems' value.
 */
-const MovieCarousel = ({ carouselTitle, fetchItems, fetchUrl, handleOnWheel }) => {
+const MovieCarousel = ({ carouselTitle, fetchItems, fetchUrl, handleOnWheel , id}) => {
 
     //Hook for initial Fetch of data and storage 
     const [isloading, fetchedData] = useHttp(
@@ -46,31 +46,32 @@ const MovieCarousel = ({ carouselTitle, fetchItems, fetchUrl, handleOnWheel }) =
                     MovieLanguage={movie.original_language}
                     MovieOverview={movie.overview}
 
-                    id={movie.id + carouselTitle}
-                    key={movie.id + carouselTitle}
+                    id={movie.id + " " + carouselTitle}
+                    key={movie.id + " " + carouselTitle}
                 ></MovieTile>
             )
         })
     }
 
     //Content
-    let content = <p className="movie-carousel">Loading Movies...</p>;
+    let content = <p className="movie-carousel" key={id + " Loading"}>Loading Movies...</p>;
 
     //If data are loaded and loadedMovies are not emplty, then list of MovieTiles will be displayed
     if (!isloading && loadedMovies) {
         content = [
-            <h2 className = "movie-carousel__title">{carouselTitle}</h2>,
+            <h2 className = "movie-carousel__title" key={id + " Title"}>{carouselTitle}</h2>,
 
             <div
                 className="movie-carousel"
                 onWheel={handleOnWheel}
                 tabIndex={0}
+                key={id + " Wrapper"}
             >
                 <button
                     className="movie-carousel__button movie-carousel__button--left"
                     onClick = {e => e.target.parentElement.scrollLeft -=450}
                     aria-label='Move To Left'
-
+                    key={id + " Left"}
                 >{"<"}</button>
 
                 {loadedMovies}
@@ -79,12 +80,13 @@ const MovieCarousel = ({ carouselTitle, fetchItems, fetchUrl, handleOnWheel }) =
                     className="movie-carousel__button movie-carousel__button--right"
                     onClick = {e => e.target.parentElement.scrollLeft +=450}
                     aria-label='Move To Right'
+                    key={id + " Right"}
                 >{">"}</button>
             </div>
         ]
     } else if (!isloading && !loadedMovies) {
         //If data are no longer loading yet loadedMovies are empty err will be shown
-        content = <p className="movie-carousel">Failed to fetch character.</p>;
+        content = <p className="movie-carousel" key={id+" Failed to fetch character"}>Failed to fetch character.</p>;
     }
 
     //Returning Content

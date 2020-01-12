@@ -82,8 +82,6 @@ const MovieTile = ({ MovieTitle, MoviePopularity, MovieImage, MovieLanguage, Mov
             className={(isLargeTile && tileStateId === id) ? "movie-carousel__info-window" : "movie-carousel__tile"}
             onClick={handleOnClick}
             ref={videoElementRef}
-
-            key={MoviePopularity + id}
         >
             {
                 //Rendering either regular Tile or Movie Info Window
@@ -96,8 +94,8 @@ const MovieTile = ({ MovieTitle, MoviePopularity, MovieImage, MovieLanguage, Mov
                         MovieLanguage={MovieLanguage}
                         MovieOverview={MovieOverview}
 
-                        id={id}
-                        key={"MIW" + id}
+                        id={id + " Info Window"}
+                        key={id + " Info Window"}
                     ></MovieInfoWindow>
             }
         </div>
