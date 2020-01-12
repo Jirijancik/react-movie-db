@@ -1,0 +1,45 @@
+@import "../variables/Variables.css";
+
+
+//Overriding Shaka Player UI Styles
+.shaka-video {
+    margin-top: 2rem;
+    max-width: 100%;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+}
+
+.shaka-controls-button-panel>* {
+    color: var(--secondary-collor) !important;
+}
+
+.shaka-play-button {
+    border-radius: 20px !important;
+    background-color: var(--secondary-collor) !important;
+}
+
+.shaka-controls-container {
+    top: 1px !important;
+}
+
+.material-icons {
+    font-size: var(--font-medium-size) !important;
+}
+
+//Wrapper around Shaka Player
+.movie-player {
+    //Grid area used in ".movie-carousel__info-window"
+    grid-area: trailer;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    cursor: pointer;
+
+    &__container {
+        display: gird;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+    }
+}

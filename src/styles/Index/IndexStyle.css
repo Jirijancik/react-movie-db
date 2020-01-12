@@ -20,13 +20,13 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--thumbBG);
+  background-color: var(--secondary-collor);
   border-radius: 0px;
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  scrollbar-color: var(--secondary-collor) var(--scrollbarBG);
 }
 
 html {
@@ -34,12 +34,10 @@ html {
 }
 
 ::-moz-selection {
-  background-color: var(--thumbBG);
-  color: var(--font-primary-collor);
+  background-color: var(--secondary-collor);
 }
 
 ::selection {
-  background-color: var(--thumbBG);
-  color: var(--font-primary-collor);
+  background-color: var(--secondary-collor);
 }
 /*# sourceMappingURL=IndexStyle.css.map */

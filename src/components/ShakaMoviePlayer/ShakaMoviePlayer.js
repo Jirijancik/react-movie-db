@@ -1,24 +1,28 @@
 import React from 'react';
 
 /* 
-Library for transmuxing  TS to MP4 for browsers. MPEG2-TS streams are not allways supported. 
+* Library for transmuxing TS to MP4 for browsers. MPEG2-TS streams are not allways supported. 
 */
 import muxjs from "mux.js";
 
-
+//Import Styles 
 import 'shaka-player/dist/controls.css';
-import '../../styles/MoviePlayer';
+//Import Styles for Shaka Player UI Customization
+import '../../styles/ShakaPlayer';
+//Import ShakaPlayer JS
 const shaka = require('shaka-player/dist/shaka-player.ui.js');
 
-
+/**
+ * Shaka Movie Player component with hardcoded HLS stream adress. Consists of Big Play Button, Mute, Fullscreen and Track Bar. 
+ * Using custom styles and Muxjs
+ */
 class ShakaMoviePlayer extends React.PureComponent{
 
 	constructor(props){
-
 		super(props);
 		//Assigning muxi to global environment
 		window.muxjs = muxjs;
-		
+
 		//Creating reference to store video component
 		this.videoComponent = React.createRef();
 
@@ -41,7 +45,6 @@ class ShakaMoviePlayer extends React.PureComponent{
 	}
 
 	componentDidMount(){
-
 		//Link to HLS stream
 		var manifestUri = 'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8';
 
@@ -74,20 +77,24 @@ class ShakaMoviePlayer extends React.PureComponent{
   		// Try to load a manifest.
 	  	// This is an asynchronous process.
 	  	player.load(manifestUri).then(function() {
-		    // This runs if the asynchronous load is successful.
+		    // This runs if loading is successful.
 		    console.log('The video has now been loaded!');
-	  	}).catch(this.onError);  // onError is executed if the asynchronous load fails.
+	  	}).catch(this.onError);  // onError is executed if loading fails.
 
 	}
 
 	render(){
 
 		/*
-		Returning video with a container. 
+		* Returning video with a container. 
 		*/
 		
 		return(
-			<div className="movie-player" ref={this.videoContainer}>
+			<div 
+			className="movie-player" 
+			ref={this.videoContainer}
+			key={this.props.id + "Shaka-Player"}
+			>
 				<video 
 					className="shaka-video"
 					ref={this.videoComponent}

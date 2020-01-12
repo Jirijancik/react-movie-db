@@ -41,6 +41,10 @@
   -webkit-user-drag: none;
 }
 
+.movie-carousel__tile__poster:focus {
+  outline-color: var(--secondary-collor);
+}
+
 .movie-carousel__tile__popularity {
   display: -ms-grid;
   display: grid;
@@ -55,18 +59,18 @@
   -ms-flex-line-pack: center;
       align-content: center;
   position: absolute;
-  background-color: var(--thumbBG);
-  -webkit-box-shadow: 1px 1px 2px 1px var(--thumbBG), 2px 2px 1px 2px var(--scrollbarBG);
-          box-shadow: 1px 1px 2px 1px var(--thumbBG), 2px 2px 1px 2px var(--scrollbarBG);
+  background-color: var(--secondary-collor);
+  -webkit-box-shadow: 1px 1px 2px 1px var(--secondary-collor), 2px 2px 1px 2px var(--scrollbarBG);
+          box-shadow: 1px 1px 2px 1px var(--secondary-collor), 2px 2px 1px 2px var(--scrollbarBG);
   z-index: 999;
 }
 
 .movie-carousel__tile__name {
-  width: 100%;
+  width: 95%;
   z-index: 50;
   position: absolute;
   top: 30%;
-  font-size: 50px;
+  font-size: var(--font-large-size);
   text-align: center;
   opacity: 0;
 }

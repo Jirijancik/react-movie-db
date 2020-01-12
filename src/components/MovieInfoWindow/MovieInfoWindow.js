@@ -1,15 +1,16 @@
 import React from 'react'
 
-import MoviePlayer from '../MoviePlayer'
-
-import '../../styles/MovieInfoWindow'
+//Import components
 import ShakaMoviePlayer from '../ShakaMoviePlayer/ShakaMoviePlayer'
 
+//Import styles
+import '../../styles/MovieInfoWindow'
 
-const MovieInfoWindow = ({ MovieTitle, MovieImageURL, MoviePopularity, MovieLanguage, MovieOverview, id}) => {
-
-
-
+/**
+ * Movie Info Window is component that provides user with additional information about the selected Movie. 
+ * It consists of Header, Popularity, Language, Overview and Trailer - played with Shaka Player.
+ */
+const MovieInfoWindow = ({ MovieTitle, MoviePopularity, MovieLanguage, MovieOverview, id}) => {
 
     let content = [
         <h1 className="movie-carousel__info-window__header">{MovieTitle}</h1>,
@@ -17,16 +18,11 @@ const MovieInfoWindow = ({ MovieTitle, MovieImageURL, MoviePopularity, MovieLang
         <p className="movie-carousel__info-window__language">Language: {MovieLanguage}</p>,
         <p className="movie-carousel__info-window__overview">Overview: {MovieOverview}</p>,
 
-    //    <MoviePlayer 
-    //    MovieImageURL={MovieImageURL}
-       
-    //    key={id+"player"+MovieImageURL}
-    //    ></MoviePlayer>
-
-        <ShakaMoviePlayer></ShakaMoviePlayer>
-            
+        //Shaka Player Component
+        <ShakaMoviePlayer id={id}></ShakaMoviePlayer> 
     ]
 
+    //Returning Content
     return content;
 }
 

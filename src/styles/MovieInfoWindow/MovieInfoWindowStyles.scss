@@ -4,12 +4,12 @@
     z-index: 9999;
     display: grid;
     width: 50vw;
-    height:30vh;
-    padding: 10px 35px;
-    margin: 0;
-    background-color:transparent;
+    height: 30vh;
+    margin: 10px 55px;
+    padding: 0;
+    background-color: transparent;
     transition: width .3s ease-in, height .55s ease-in;
-    grid-template-columns: 4fr 7fr;
+    grid-template-columns: 5fr 7fr;
     grid-column-gap: 20px;
 
     grid-template-areas:
@@ -22,24 +22,27 @@
     ;
 
     &__span--purple {
-        color: var(--thumbBG);
+        color: var(--secondary-collor);
         font-weight: bold;
     }
 
     &__header {
         grid-area: header;
+        font-size: var(--font-medium-size);
     }
 
     &__popularity {
         grid-area: popularity;
+        font-size: var(--font-small-size);
     }
 
     &__language {
         grid-area: language;
+        font-size: var(--font-small-size);
     }
 
     &__overview {
         grid-area: overview;
+        font-size: var(--font-small-size);
     }
 }
-

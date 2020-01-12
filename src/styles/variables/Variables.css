@@ -1,21 +1,28 @@
 :root {
-  /*******************FONT COLLORS*************************/
-  --font-primary-collor: #ffffff;
-  --font-secondary-collor: #000;
+  /***********************COLLORS*************************/
+  --primary-collor: rgb(212, 209, 209);
+  --secondary-collor: #c202d4;
+
+
   /*******************BACKGROUND COLLORS*******************/
   --background-primary-collor: #000;
-  --background-secondary-collor: #ffffff;
+  --background-focus-collor: rgb(12, 12, 12);
+
   /*******************SCROLLBAR COLLORS********************/
   --scrollbarBG: #000;
-  --thumbBG: #c202d4;
 
-  /*************************FONT***************************/
-  --font-main: stellar-light,sans-serif;
+  /***************************FONT*************************/
+  --font-main: stellar-light, sans-serif;
+  --font-primary-collor: #ffffff;
+  --font-small-size: 18px;
+  --font-medium-size: 35px;
+  --font-large-size: 45px;
+  --font-largest-size: 75px;
 }
 
 
 
-@font-face{
+@font-face {
   src: url(../../font/Stellar-light.otf);
   font-family: stellar-light;
 }

@@ -17,6 +17,7 @@
         transition: opacity .2s ease-in-out;
         cursor: pointer;
     }
+
     &:hover .movie-carousel__tile__name{
         opacity: 1;
         transition: opacity .35s ease-in-out;
@@ -29,7 +30,11 @@
         opacity: 1;
         user-select: none;
         -webkit-user-drag: none;
+        &:focus{
+            outline-color: var(--secondary-collor);
+        }
     }
+
     &__popularity{
         display: grid;
         top: 0;
@@ -40,16 +45,17 @@
         justify-content: center;
         align-content: center;
         position: absolute;
-        background-color: var(--thumbBG);
-        box-shadow:  1px 1px 2px 1px var(--thumbBG), 2px 2px 1px 2px var(--scrollbarBG);
+        background-color: var(--secondary-collor);
+        box-shadow:  1px 1px 2px 1px var(--secondary-collor), 2px 2px 1px 2px var(--scrollbarBG);
         z-index: 999;
     }
+
     &__name{
-        width: 100%;
+        width: 95%;
         z-index: 50;
         position: absolute;
         top: 30%;
-        font-size: 50px;
+        font-size: var(--font-large-size);
         text-align: center;
         opacity: 0;
     }

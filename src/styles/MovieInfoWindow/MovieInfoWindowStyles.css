@@ -5,19 +5,19 @@
   display: grid;
   width: 50vw;
   height: 30vh;
-  padding: 10px 35px;
-  margin: 0;
+  margin: 10px 55px;
+  padding: 0;
   background-color: transparent;
   -webkit-transition: width .3s ease-in, height .55s ease-in;
   transition: width .3s ease-in, height .55s ease-in;
-  -ms-grid-columns: 4fr 7fr;
-      grid-template-columns: 4fr 7fr;
+  -ms-grid-columns: 5fr 7fr;
+      grid-template-columns: 5fr 7fr;
   grid-column-gap: 20px;
       grid-template-areas: "header      trailer" "header      trailer" "popularity  trailer" "language    trailer" "   .        trailer" "overview    trailer";
 }
 
 .movie-carousel__info-window__span--purple {
-  color: var(--thumbBG);
+  color: var(--secondary-collor);
   font-weight: bold;
 }
 
@@ -26,23 +26,27 @@
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: header;
+  font-size: var(--font-medium-size);
 }
 
 .movie-carousel__info-window__popularity {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: popularity;
+  font-size: var(--font-small-size);
 }
 
 .movie-carousel__info-window__language {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: language;
+  font-size: var(--font-small-size);
 }
 
 .movie-carousel__info-window__overview {
   -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: overview;
+  font-size: var(--font-small-size);
 }
 /*# sourceMappingURL=MovieInfoWindowStyles.css.map */

@@ -2,8 +2,6 @@
 
 
 .movie-carousel {
-  //  background-color: var(--background-primary-collor);
-  //  color: var(--font-primary-collor);
   display: grid;
   position: relative;
   grid-auto-flow: column;
@@ -13,26 +11,47 @@
   justify-items: center;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
+  background-color: transparent;
+  transition: background-color .15s ease-out;
 
-  &__button{
+  &:focus {
+    outline: none;
+    background-color: var(--background-focus-collor);
+    transition: background-color .2s ease-in;
+  }
+
+  &__title {
+    margin-left: 50px;
+    font-size: var(--font-medium-size);
+  }
+
+  &__button {
     z-index: 9999999999999;
     width: 70px;
     height: 100%;
     position: sticky;
     background-color: transparent;
     border: none;
-    color: var(--thumbBG);
-    font-size: 80px;
+    color: var(--secondary-collor);
+    font-size: calc(var(--font-largest-size) * 1.35);
     opacity: 0.7;
-    outline-color: var(--thumbBG);
-    &--right{
+
+    &--right {
       right: 0;
     }
-    &--left{
+
+    &--left {
       left: 0;
     }
-    &:hover{
+
+    &:hover {
       opacity: 1;
+    }
+
+    &:focus {
+      outline-color: var(--secondary-collor);
+      opacity: 1;
+      transition: all 0.25s ease;
     }
   }
 }
