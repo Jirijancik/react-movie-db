@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/Jirijancik/react-movie-db/static/css/main.2b34ebe0.chunk.css",
-    "main.js": "/Jirijancik/react-movie-db/static/js/main.f3b3605f.chunk.js",
-    "main.js.map": "/Jirijancik/react-movie-db/static/js/main.f3b3605f.chunk.js.map",
-    "runtime-main.js": "/Jirijancik/react-movie-db/static/js/runtime-main.1b1ca661.js",
-    "runtime-main.js.map": "/Jirijancik/react-movie-db/static/js/runtime-main.1b1ca661.js.map",
-    "static/css/2.b8bfb327.chunk.css": "/Jirijancik/react-movie-db/static/css/2.b8bfb327.chunk.css",
-    "static/js/2.c0a6f07a.chunk.js": "/Jirijancik/react-movie-db/static/js/2.c0a6f07a.chunk.js",
-    "static/js/2.c0a6f07a.chunk.js.map": "/Jirijancik/react-movie-db/static/js/2.c0a6f07a.chunk.js.map",
-    "index.html": "/Jirijancik/react-movie-db/index.html",
-    "precache-manifest.14a7a7536bb927ebf11c6d99bdc49782.js": "/Jirijancik/react-movie-db/precache-manifest.14a7a7536bb927ebf11c6d99bdc49782.js",
-    "service-worker.js": "/Jirijancik/react-movie-db/service-worker.js",
-    "static/css/2.b8bfb327.chunk.css.map": "/Jirijancik/react-movie-db/static/css/2.b8bfb327.chunk.css.map",
-    "static/css/main.2b34ebe0.chunk.css.map": "/Jirijancik/react-movie-db/static/css/main.2b34ebe0.chunk.css.map",
-    "static/js/2.c0a6f07a.chunk.js.LICENSE": "/Jirijancik/react-movie-db/static/js/2.c0a6f07a.chunk.js.LICENSE",
-    "static/media/ImageNotFound.jpg": "/Jirijancik/react-movie-db/static/media/ImageNotFound.70a7c7f3.jpg",
-    "static/media/IndexStyle.css": "/Jirijancik/react-movie-db/static/media/Stellar-light.7b34a834.otf"
+    "main.css": "/react-movie-db/static/css/main.c5ab4285.chunk.css",
+    "main.js": "/react-movie-db/static/js/main.6c1b644d.chunk.js",
+    "main.js.map": "/react-movie-db/static/js/main.6c1b644d.chunk.js.map",
+    "runtime-main.js": "/react-movie-db/static/js/runtime-main.4865fb05.js",
+    "runtime-main.js.map": "/react-movie-db/static/js/runtime-main.4865fb05.js.map",
+    "static/css/2.b8bfb327.chunk.css": "/react-movie-db/static/css/2.b8bfb327.chunk.css",
+    "static/js/2.c0a6f07a.chunk.js": "/react-movie-db/static/js/2.c0a6f07a.chunk.js",
+    "static/js/2.c0a6f07a.chunk.js.map": "/react-movie-db/static/js/2.c0a6f07a.chunk.js.map",
+    "index.html": "/react-movie-db/index.html",
+    "precache-manifest.25f15285d7268c5c88ee610f6f7e10ae.js": "/react-movie-db/precache-manifest.25f15285d7268c5c88ee610f6f7e10ae.js",
+    "service-worker.js": "/react-movie-db/service-worker.js",
+    "static/css/2.b8bfb327.chunk.css.map": "/react-movie-db/static/css/2.b8bfb327.chunk.css.map",
+    "static/css/main.c5ab4285.chunk.css.map": "/react-movie-db/static/css/main.c5ab4285.chunk.css.map",
+    "static/js/2.c0a6f07a.chunk.js.LICENSE": "/react-movie-db/static/js/2.c0a6f07a.chunk.js.LICENSE",
+    "static/media/ImageNotFound.jpg": "/react-movie-db/static/media/ImageNotFound.70a7c7f3.jpg",
+    "static/media/IndexStyle.css": "/react-movie-db/static/media/Stellar-light.7b34a834.otf"
   },
   "entrypoints": [
-    "static/js/runtime-main.1b1ca661.js",
+    "static/js/runtime-main.4865fb05.js",
     "static/css/2.b8bfb327.chunk.css",
     "static/js/2.c0a6f07a.chunk.js",
-    "static/css/main.2b34ebe0.chunk.css",
-    "static/js/main.f3b3605f.chunk.js"
+    "static/css/main.c5ab4285.chunk.css",
+    "static/js/main.6c1b644d.chunk.js"
   ]
 }
