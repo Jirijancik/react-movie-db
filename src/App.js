@@ -10,9 +10,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 /**
  * App showing data from themoviedb.org via API
- * Contains: Carousell, Movie Tiles, Movie Info Windows, Shaka Player, SearchPage
+ * Contains: Carousell, Movie Tiles, Movie Info Windows, Shaka Player, Search Page
  * Technology: Mainly are used Funcional Components with hooks and for Movie Tiles is 
- * set up Movie Tile Context providin ID of current active Movie Tile.
+ * set up Movie Tile Context providing ID of current active Movie Tile.
  * For Route there is used "process.env.PUBLIC_URL" so it works in developpement as well as in GitHub-Pages
  */
 function App() {

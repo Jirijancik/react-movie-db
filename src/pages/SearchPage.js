@@ -56,7 +56,7 @@ const SearchPage = () => {
     return [
         //Custom Link to navigate back to Home Page
         <div key="SearchPage-HomeLink" className="link-wrapper link-wrapper--with-margin">
-            <Link to="/">
+            <Link to={process.env.PUBLIC_URL + '/'}>
                 <h1 className="custom-underline ">HOME</h1>
             </Link>
         </div>,
